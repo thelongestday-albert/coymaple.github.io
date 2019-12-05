@@ -94,7 +94,13 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+# deploy:
+#   type: git
+#   repository: git@github.com:coymaple/coymaple.github.io.git
+#   branch: master
+
 deploy:
-  type: git
-  repository: git@github.com:coymaple/coymaple.github.io.git
+- type: git
+  # 下方的gh_token会被.travis.yml中sed命令替换
+  repo: https://Travis@github.com:coymaple/coymaple.github.io.git
   branch: master
