@@ -100,8 +100,8 @@ theme: next
 #   branch: master
 
 deploy:
-- type: git
+  type: git
   # 下方的gh_token会被.travis.yml中sed命令替换
-  # repo: https://Travis@github.com:coymaple/coymaple.github.io.git
-  repo: https://github.com/coymaple/coymaple.github.io.git
+  repo: https://Travis@github.com:coymaple/coymaple.github.io.git
+  # repo: https://github.com/coymaple/coymaple.github.io.git
   branch: master
