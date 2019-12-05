@@ -96,5 +96,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/coymaple/coymaple.github.io.git
+  repository: git@github.com:coymaple/coymaple.github.io.git
   branch: master
