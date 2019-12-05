@@ -34,5 +34,5 @@ after_script:
 #  - git add .
 #  - git commit -m "Update docs"
 #  - git push --force --quiet "${Travis}@${GH_REF}" master:master
-  - sed -i "s/Travis/${Travis}/g" ./_config.yml
+  - sed -i "s/Travis/${myblog}/g" ./_config.yml
   - hexo deploy
