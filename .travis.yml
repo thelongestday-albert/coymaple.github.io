@@ -27,17 +27,12 @@ script:
   - hexo generate
 
 after_script:
- - cd ./public
- - git init
- - git config user.name "coymaple"
- - git config user.email "dxd0403@163.com"
- - git add .
- - git commit -m "Update docs"
+#  - cd ./public
+#  - git init
+  - git config user.name "coymaple"
+  - git config user.email "dxd0403@163.com"
+#  - git add .
+#  - git commit -m "Update docs"
 #  - git push --force --quiet "${Travis}@${GH_REF}" master:master
- - git push --force --quiet "${myblog}@${GH_REF}" master:master
-  # - sed -i "s/Travis/${myblog}/g" ./_config.yml
-  # - hexo deploy
-
-env:
- global:
-   - GH_REF: github.com/mtianyan/mtianyan.github.io.git
+  - sed -i "s/myblog/${myblog}/g" ./_config.yml
+  - hexo deploy
