@@ -2,6 +2,8 @@
 title: npm 常用命令
 date: 2019-12-05 11:04:06
 tags:
+- node 
+- npm
 ---
 [toc]
 # npm 

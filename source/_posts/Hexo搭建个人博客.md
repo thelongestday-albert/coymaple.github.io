@@ -1,6 +1,8 @@
 
 ---
 title: Hexo搭建个人博客
+tags:
+- node
 ---
 
 这篇文章是对知乎专栏文章[超详细Hexo+Github博客搭建小白教程](https://zhuanlan.zhihu.com/p/35668237)的一个补充，首先感谢作者，按照作者的提示，成功地搭建起了个人博客系统。

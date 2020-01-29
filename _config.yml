@@ -105,3 +105,9 @@ deploy:
   # repo: https://Travis@github.com:coymaple/coymaple.github.io.git
   repo: https://myblog@github.com/coymaple/coymaple.github.io.git
   branch: master
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000

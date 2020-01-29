@@ -296,6 +296,7 @@
     // handle and trigger popup window;
     $('.popup-trigger').click(function(e) {
       e.stopPropagation();
+      e.preventDefault();
       if (isfetched === false) {
         searchFunc(path, 'local-search-input', 'local-search-result');
       } else {
