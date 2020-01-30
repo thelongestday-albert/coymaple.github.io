@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hexo搭建个人博客</title>
+    <url>/2020/01/30/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>这篇文章是对知乎专栏文章<a href="https://zhuanlan.zhihu.com/p/35668237" target="_blank" rel="noopener">超详细Hexo+Github博客搭建小白教程</a>的一个补充，首先感谢作者，按照作者的提示，成功地搭建起了个人博客系统。</p>
+<p>文章中第三步 安装Hexo，作者在安装完hexo-cli 模块以后继续安装 hexo 模块，其实 hexo init 命令在执行之后，生成的 package.json 文件中模块依赖第一项就是 hexo ，可以在执行完 hexo init 命令之后，执行 npm install 安装包括 hexo 在内地依赖模块。有一点需要注意，就是 hexo init命令执行要求当前的工作目录必须是空文件夹。</p>
+<p>记一下 Hexo 的命令。</p>
+<ul>
+<li>hexo g 生成静态文件</li>
+<li>hexo s 在本地浏览器中浏览博客网页</li>
+<li>hexo new post “article title” 新建一篇文章，文章保存在 \source_posts 下面，文件名是 article title.md</li>
+<li>hexo new post 执行后会在路径 \source_posts 下面建立一个 post.md 文件。</li>
+<li>hexo d 部署至服务器，可能会是 github</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/01/30/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>element-ui</title>
+    <url>/2019/12/05/element-ui/</url>
+    <content><![CDATA[<p>1、el-upload 组件</p>
+<ul>
+<li>element-ui的上传组件中的accept参数怎么使用<a href="https://segmentfault.com/q/1010000010732163" target="_blank" rel="noopener">https://segmentfault.com/q/1010000010732163</a></li>
+<li>element-ui文件上传 做类型大小的限制<a href="https://www.cnblogs.com/yysbolg/p/11095901.html" target="_blank" rel="noopener">https://www.cnblogs.com/yysbolg/p/11095901.html</a></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 上传之前验证是否是图片</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">beforeUpload(file) &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">const</span> extension = file.name.substring(file.name.lastIndexOf(<span class="string">"."</span>) + <span class="number">1</span>);</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">const</span> types = [<span class="string">'jpg'</span>, <span class="string">'jpeg'</span>, <span class="string">'png'</span>, <span class="string">'gif'</span>]</span></pre></td></tr><tr><td class="code"><pre><span class="line">  types.includes(extension);</span></pre></td></tr><tr><td class="code"><pre><span class="line">  <span class="keyword">return</span> types.includes(extension);</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<p>限制上传文件大小</p>
+<p>2、el-radio</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 单选按钮选中事件处理函数，事件参数的值是选中的label的值</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">onRadioChange(e) &#123;&#125;</span></pre></td></tr></table></figure>
+
+<p>3、el-input 添加按下enter键的事件处理无效，添加 .native 修饰符之后可以了。</p>
+<p>4、Vue组件的三种调用方式<a href="https://www.cnblogs.com/wwhhq/p/8283769.html" target="_blank" rel="noopener">https://www.cnblogs.com/wwhhq/p/8283769.html</a></p>
+<p>有的时候，有一些组件内部有很多的控制参数，这些参数控制着组件内部一些子组件的显示和隐藏，很多时候，这些用来实现显示控制的参数可能父组件实际要用到的参数还要多。</p>
+<p>5、<br>在路由配置文件里面的配置meta参数，在组件内部可以通过 this.$route.meta 获取。</p>
+<p>模态框既可以显式调用，又可以隐式调用。</p>
+<p>仿 bootstrap 模态框</p>
+<p>6、vue-element-admin 中使用svg图标。<br>框架中已经帮我们封装好了组件，只需要把需要的图标放进 <code>@/icon/svg</code> 文件夹内，在需要使用图标的地方引入 svg-icon 组件，</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">svg-icon</span> <span class="attr">icon-class</span>=<span class="string">"question-mark"</span>&gt;</span><span class="tag">&lt;/<span class="name">svg-icon</span>&gt;</span></span></pre></td></tr></table></figure>
+
+<p>icon-class 是放入<code>@/icon/svg</code>目录内的文件名称，</p>
+]]></content>
+      <tags>
+        <tag>elementui</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>替换node版本</title>
+    <url>/2019/12/05/node/</url>
+    <content><![CDATA[<h2 id="替换node版本"><a href="#替换node版本" class="headerlink" title="替换node版本"></a>替换node版本</h2><p>科普文：使用 nvs 管理本地 Node.js 版本 <a href="https://zhuanlan.zhihu.com/p/63403762" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/63403762</a></p>
+<p>nvs 命令执行报错：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">nvs : 无法加载文件 C:\Users\Admin\AppData\Local\nvs\nvs.ps1，因为在此系统上禁止运行脚本。有关详细信息，请参阅 https:&#x2F;go</span></pre></td></tr><tr><td class="code"><pre><span class="line">.microsoft.com&#x2F;fwlink&#x2F;?LinkID&#x3D;135170 中的 about_Execution_Policies。</span></pre></td></tr><tr><td class="code"><pre><span class="line">所在位置 行:1 字符: 1</span></pre></td></tr><tr><td class="code"><pre><span class="line">+ nvs -v</span></pre></td></tr><tr><td class="code"><pre><span class="line">+ ~~~</span></pre></td></tr><tr><td class="code"><pre><span class="line">    + CategoryInfo          : SecurityError: (:) []，PSSecurityException</span></pre></td></tr><tr><td class="code"><pre><span class="line">    + FullyQualifiedErrorId : UnauthorizedAccess</span></pre></td></tr></table></figure>
+
+<p>解决方法： 以管理员身份打开 windows powershell ,执行 <code>get-ExecutionPolicy</code> ，如果命令返回的不是 <strong>RemoteSigned</strong>，执行命令 <code>set-ExecutionPolicy RemoteSigned</code>。</p>
+<p><code>npm get prefix</code> 命令可以获取 npm 安装的全局模块的路径。</p>
+<p>nvs 默认不会管理未通过nvs下载的node版本。</p>
+]]></content>
+      <tags>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm 常用命令</title>
+    <url>/2019/12/05/npm/</url>
+    <content><![CDATA[<p>[toc]</p>
+<h1 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h1><p>npm init </p>
+<h2 id="安装模块"><a href="#安装模块" class="headerlink" title="安装模块"></a>安装模块</h2><p>在项目中已经有 package.json 文件的情况下，可以执行 <code>npm install</code> 命令，npm 包管理器会自动解析 package.json 文件，自动下载项目依赖。</p>
+<p>npm install 命令后面可以跟以下几个参数：</p>
+<ul>
+<li><p>-g 下载全局模块，在所有路径下面都可以使用，安装到项目里面的模块使用命令除了写到package.json script 属性内的外，还可以使用 npx 命令。</p>
+</li>
+<li><p>–save,-S  将模块依赖关系写入到package.json文件的dependencies参数中</p>
+</li>
+<li><p>–save-dev,-D   将模块依赖关系写入到package.json文件的devDependencies参数中</p>
+</li>
+</ul>
+<blockquote>
+<p>devDependencies  里面的模块只用于开发环境，不用于生产环境，而 dependencies  是需要发布到生产环境的。</p>
+</blockquote>
+<h2 id="卸载模块"><a href="#卸载模块" class="headerlink" title="卸载模块"></a>卸载模块</h2><p><code>npm uninstall &lt;name&gt;</code></p>
+<p>卸载全局模块 <code>npm uninstall -g &lt;name&gt;</code></p>
+<p><code>npm un</code> 是 <code>npm uninstall</code> 的缩写形式。</p>
+<h2 id="修改npm源"><a href="#修改npm源" class="headerlink" title="修改npm源"></a>修改npm源</h2><p><code>npm config set registry &lt;URL&gt;</code></p>
+<blockquote>
+<p>将 npm 源更换为淘宝源 <code>npm config set registry https://registry.npm.taobao.org/</code>。</p>
+</blockquote>
+<p>上面这个命令执行成功之后，可以执行 <code>npm config get registry</code> 命令查看上面这条命令是否执行成功。</p>
+<h2 id="修改全局模块安装路径"><a href="#修改全局模块安装路径" class="headerlink" title="修改全局模块安装路径"></a>修改全局模块安装路径</h2><p><code>npm config set prefix &lt;PATH&gt;</code></p>
+<p>与修改npm源比较类似，这个命令成功以后，可以执行 <code>npm config get prefix</code> 查看命令执行的结果。</p>
+<h2 id="npm-init"><a href="#npm-init" class="headerlink" title="npm init"></a>npm init</h2><p>使用参数 <code>--yes</code> 来跳过执行 <code>npm init</code> 命令时的回答提问阶段，快速生成一个 package.json 文件。</p>
+<p><code>npm init --yes</code></p>
+<h2 id="查看全局或项目中模块安装的路径"><a href="#查看全局或项目中模块安装的路径" class="headerlink" title="查看全局或项目中模块安装的路径"></a>查看全局或项目中模块安装的路径</h2><p><code>npm root</code> 或 <code>npm root -g</code> 可以查看查看全局或项目中模块安装的路径。</p>
+<h2 id="查看npm安装的模块"><a href="#查看npm安装的模块" class="headerlink" title="查看npm安装的模块"></a>查看npm安装的模块</h2><p><code>npm list</code> 和 <code>npm ls</code> 以及 <code>npm ll</code> 都可以查看当前项目中安装的模块列表。</p>
+<p>这几个命令都可以在后面加参数 –depth=0 来过滤模块的层级</p>
+<blockquote>
+<p>Node模块搜索是从代码执行的当前目录开始的，搜索结果取决于当前使用的目录中的node_modules下的内容。</p>
+</blockquote>
+<p>当当前项目中依赖在package.json 文件中出现，但是实际并没有下载时，npm 也会标记出来。如下图所示：</p>
+<p><img src="https://i.loli.net/2019/12/05/jWysHoQVYLu7h1g.png" alt="微信图片_20191205092427.png"></p>
+<h2 id="windows-电脑全局安装的脚本不能找到的问题"><a href="#windows-电脑全局安装的脚本不能找到的问题" class="headerlink" title="windows 电脑全局安装的脚本不能找到的问题"></a>windows 电脑全局安装的脚本不能找到的问题</h2><p>以管理员身份打开 windows powershell ,执行 <code>get-ExecutionPolicy</code> ，如果命令返回的不是 <strong>RemoteSigned</strong>，执行命令 <code>set-ExecutionPolicy RemoteSigned</code>。</p>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>1、<code>npm view moduleName engines</code> 可以查看当前安装的模块依赖的 nodejs 版本。</p>
+<p>在终端中输入 <code>npm view mocha engines</code> ，其命令结果如下：</p>
+<p><img src="https://i.loli.net/2019/12/05/YMEjZDte2XF517c.png" alt="Snipaste_2019-12-05_09-37-15.png"></p>
+]]></content>
+      <tags>
+        <tag>node</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+</search>
