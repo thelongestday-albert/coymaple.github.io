@@ -5,7 +5,11 @@ tags:
 - node 
 - npm
 ---
-[toc]
+
+> 作为一名前端开发人员，npm 可以说是最熟悉也是最陌生的一个工具了。几乎每天的开发都要用到 `npm install` 和 `npm run <command-name>` 命令，但很多前端开发者对它的了解也就止步于此了。本文旨在介绍npm中除上面介绍的之外的命令。
+
+<!-- more -->
+
 # npm 
 npm init 
 
@@ -64,8 +68,7 @@ npm install 命令后面可以跟以下几个参数：
 
 当当前项目中依赖在package.json 文件中出现，但是实际并没有下载时，npm 也会标记出来。如下图所示：
 
-![微信图片_20191205092427.png](https://i.loli.net/2019/12/05/jWysHoQVYLu7h1g.png)
-
+![](http://cdn.coymaple.com/jWysHoQVYLu7h1g.png)
 ## windows 电脑全局安装的脚本不能找到的问题
 
 以管理员身份打开 windows powershell ,执行 `get-ExecutionPolicy` ，如果命令返回的不是 **RemoteSigned**，执行命令 `set-ExecutionPolicy RemoteSigned`。
@@ -77,4 +80,4 @@ npm install 命令后面可以跟以下几个参数：
 
 在终端中输入 `npm view mocha engines` ，其命令结果如下：
 
-![Snipaste_2019-12-05_09-37-15.png](https://i.loli.net/2019/12/05/YMEjZDte2XF517c.png)
+![](http://cdn.coymaple.com/YMEjZDte2XF517c.png)

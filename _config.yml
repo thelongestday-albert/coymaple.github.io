@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://www.coymaple.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -90,21 +90,25 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: next6
 
-# Deployment
-## Docs: https://hexo.io/docs/deployment.html
 # deploy:
 #   type: git
-#   repository: git@github.com:coymaple/coymaple.github.io.git
+#   # 下方的gh_token会被.travis.yml中sed命令替换
+#   # repo: https://Travis@github.com:coymaple/coymaple.github.io.git
+#   repo: https://myblog@github.com/coymaple/coymaple.github.io.git
 #   branch: master
 
 deploy:
-  type: git
-  # 下方的gh_token会被.travis.yml中sed命令替换
-  # repo: https://Travis@github.com:coymaple/coymaple.github.io.git
-  repo: https://myblog@github.com/coymaple/coymaple.github.io.git
-  branch: master
+  type: sftp
+  host: 106.14.124.109
+  user: blogdeployer
+  pass: mYWuH6aG8EYh
+  remotePath: /www/wwwroot/www.coymaple.com/
+  port: 22
+  # privateKey: [path/to/privateKey]
+  passphrase: [passphrase]
+  # agent: [path/to/agent/socket]
 
 search:
   path: search.xml

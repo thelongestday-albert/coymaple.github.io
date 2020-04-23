@@ -5,6 +5,10 @@ tags:
 - elementui
 ---
 
+此篇文章是使用UI框架 element-ui 的一些心得。
+
+<!-- more -->
+
 1、el-upload 组件
 - element-ui的上传组件中的accept参数怎么使用<https://segmentfault.com/q/1010000010732163>
 - element-ui文件上传 做类型大小的限制<https://www.cnblogs.com/yysbolg/p/11095901.html>

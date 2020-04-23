@@ -16,7 +16,7 @@ before_install:
 # S: Build Lifecycle
 install:
   - npm install
-  - npm install hexo-deployer-git --save
+  - npm install hexo-deployer-sftp --save
 
 
 # before_script:
@@ -25,14 +25,10 @@ install:
 script:
   - hexo clean
   - hexo generate
-
-after_script:
-#  - cd ./public
-#  - git init
-  - git config user.name "coymaple"
-  - git config user.email "dxd0403@163.com"
-#  - git add .
-#  - git commit -m "Update docs"
-#  - git push --force --quiet "${Travis}@${GH_REF}" master:master
-  - sed -i "s/myblog/${myblog}/g" ./_config.yml
   - hexo deploy
+
+# after_script:
+#   - git config user.name "coymaple"
+#   - git config user.email "dxd0403@163.com"
+#   - sed -i "s/myblog/${myblog}/g" ./_config.yml
+#   - hexo deploy
