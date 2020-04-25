@@ -33,11 +33,11 @@ script:
 #   - sed -i "s/myblog/${myblog}/g" ./_config.yml
 #   - hexo deploy
 
-after_success:
-  "find ./public -type f -exec curl --ftp-create-dirs -u $FTP_USER:$FTP_PASSWORD -T {} ftp://106.14.124.109/$FTP_PATH/{} \\;"
+# after_success:
+#   "find ./public -type f -exec curl --ftp-create-dirs -u $FTP_USER:$FTP_PASSWORD -T {} ftp://106.14.124.109/$FTP_PATH/{} \\;"
 
-env:
-  global:
-    - "FTP_PATH=/www/wwwroot/www.coymaple.com"
-    - "FTP_USER=blogdeployer"
-    - "FTP_PASSWORD=mYWuH6aG8EYh"
+# env:
+#   global:
+#     - "FTP_PATH=/www/wwwroot/www.coymaple.com"
+#     - "FTP_USER=blogdeployer"
+#     - "FTP_PASSWORD=mYWuH6aG8EYh"
