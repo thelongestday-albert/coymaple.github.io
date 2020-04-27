@@ -3,9 +3,11 @@ title: MongoDB
 tags:
 - MongoDB
 ---
-# MongoDB
+<!-- # MongoDB -->
 
 若没有特殊说明，本文涉及到的 MongoDB 安装在64位 win10 操作系统上，版本为 v4.0.2。
+
+<!-- more -->
 
 ## 安装
 
