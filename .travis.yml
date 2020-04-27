@@ -28,4 +28,4 @@ after_success:
   - curl --ftp-create-dirs
     -T ./public/*
     --key /tmp/sftp_rsa
-    sftp://${SFTP_USER}:${SFTP_PASSWORD}@www.coymaple.com/www/wwwroot/www.coymaple.com
+    sftp://${SFTP_USER}:${SFTP_PASSWORD}@106.14.124.109/www/wwwroot/www.coymaple.com/
