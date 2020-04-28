@@ -18,16 +18,6 @@ env:
   global:
     - secure: sQMQsCtMahPfbYSP5ucXneiIWxWLVadK7Wy6JoXuKtrcLMT99yKOJpT6kbD2MtjMMT1P2vd6TCr1hoRDWqBXYFdewv1RBafv3jFd3JEjIo1QeMpKCw/FDS6jzM4yDZ7L13wGAAYla+BGs1TrLZYdTVL1oJye3TOap4AEfRy+sqaBTTtjfyrTKm+b9d0lIHRSXKcWwW9BKpvMfHfyTpkbCHee3lDa/pjy9n6lfVqvzVEjL7usHZOa+jNzTaiWByW9+sfc/vjCp+fMzpk5xyNPwHEIZvFLUKG61nne2AwmcSpk/fJKftNugxJMW4srbF3X0m80dECwkDyNQUjFc5DRStug4bHGEvhpwUiiRTZM2BxFjpycCub90dul6QFlPKUXC0d0i+onA5H+4ONj9Crqf7D6qdavXLZU8PjL09KRO4z/EL+4ifTSaoSgbwVZNAhcxhZrl5DTRFHJtd8iqAXC18nx9dBzLsG9u3Ly26zEaWgPfpAZyjKyaRmiQadD1cgZFxNKaAhL0Sm0nV2Qoz4FDvMFpjLItPNoxjpE4Qq1FNTz9t90+GCL9GkbxECBgsYbXpzQHsZB7WLjCIVu6yQ70nKp0OSiM5AfRMHoUDFYhu/00WiZC7Ts/MS7VTrqLTH0vPjJ4uD754udXF8uZH+tEZJcUlNH5lNgug9uAjTqeVk=
     - secure: oDvLA8f2/IFbiZzwuGt7tkyKrgl5yWEHWT4rHIC6YIbJTmRdNwVbp26L9vJI8VjipLb2Rfe4rLwbeBiLbamlO5wvnwAhE4hqk3qdiL93vS5iCplXVId9Qj29nvHgoF+RyEzUgK4P1cMbrztPCUW7Sh6ygGRkDIkn2HU3lb2XkGLO6UIOvac1qv4IeyXwXSs0W6aBJ4HhdOqku0nanAiOegbCp/OpWvaT1jp+EyP20D6YwMQZNn3vshck6xNkbXvTDP0mqT2JtipnC/23CfTyd2KURxL82AruoRCaAQ7bhyPWoJJ9pKVRu976qCoaflF5MN5/ZDLFtX3rKnRhzz73hElRn7nQbyGcjhiGZxi6ytIXOhwNzpfAHYkcXngA87AjDN/8JI6bLIUJKJQvDnCA32v6VPfSYL9wx4QKv5nHrckhdUAoGabQLWyHkQ0GVDyVAN5Tvh0c5/79+eJsfaZ+4/bnfzWO1PFCSOK95iX7NPlKRU8VOVCoJNS+YrfgMiKTfv9U1lQLAC9nfquYY02j+Eh6eHcYFl9ODjeTKg/ptd8cj1mDJOHZm+h7VxYihCljRADrYQ4+Vcbzc+9SUajPTUjDehg9afcAGN+bweBzCCJCSFjb1rls5iw/ElfMJ5xphCRBHU5uGZbcpfbhG6JS0CMZtFeE0jrYwKiSYaSUdZ8=
-    # - 'SFTP_USER=[user]'
-    # - 'SFTP_PASSWORD=[password]'
-    # - "SFTP_KEY=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQ8GSwathk3DsyrBN6U1a3ibGCbd3KB/Q5bfe3pMGExT1nDdN9Xh/KmhKM0lH9Uh8cV99tXDsubvec13PzlM0KWOfTUog8RUSHJll5lXhutHTzdYvjx7qon+a1xsENmZgN54b3cBI7tE6m4M9CdDDowRowdVRVFfEvyiE6lfvxl9+l6zBLVM/Gm2TxIJLi80K9Q4BjXDOzItMD77muy4Q3UkCSJltKCpEEJmzawtCUoRZSXFxSm23nDNsip7YPt32JL/jZexGsYExRS7j6oI7gaBnQnvDjqXgm0/FOXjFyK9abN7+y01qJ1/pNutPyt8cJ3IRmiX8OgdWsNEHW3mfh blogdeployer@iZuf6jey4hho6ga344jepbZ"
-    # - "FTP_PATH=/www/wwwroot/www.coymaple.com"
 
 after_success:
-  # - echo "${SFTP_KEY}" | base64 --decode >/tmp/sftp_rsa
-  # - curl --ftp-create-dirs
-  #   -T ./public/*
-  #   --key /tmp/sftp_rsa
-  #   sftp://${SFTP_USER}:${SFTP_PASSWORD}@106.14.124.109/www/wwwroot/www.coymaple.com/
-  # - ssh ${SFTP_USER}@${SFTP_PASSWORD} "./deploy-blog.sh"
   - sshpass -p ${SFTP_PASSWORD} scp -o stricthostkeychecking=no -r ./public/* ${SFTP_USER}@106.14.124.109/www/wwwroot/www.coymaple.com/
