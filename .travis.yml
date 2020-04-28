@@ -23,4 +23,4 @@ env:
     - secure: oDvLA8f2/IFbiZzwuGt7tkyKrgl5yWEHWT4rHIC6YIbJTmRdNwVbp26L9vJI8VjipLb2Rfe4rLwbeBiLbamlO5wvnwAhE4hqk3qdiL93vS5iCplXVId9Qj29nvHgoF+RyEzUgK4P1cMbrztPCUW7Sh6ygGRkDIkn2HU3lb2XkGLO6UIOvac1qv4IeyXwXSs0W6aBJ4HhdOqku0nanAiOegbCp/OpWvaT1jp+EyP20D6YwMQZNn3vshck6xNkbXvTDP0mqT2JtipnC/23CfTyd2KURxL82AruoRCaAQ7bhyPWoJJ9pKVRu976qCoaflF5MN5/ZDLFtX3rKnRhzz73hElRn7nQbyGcjhiGZxi6ytIXOhwNzpfAHYkcXngA87AjDN/8JI6bLIUJKJQvDnCA32v6VPfSYL9wx4QKv5nHrckhdUAoGabQLWyHkQ0GVDyVAN5Tvh0c5/79+eJsfaZ+4/bnfzWO1PFCSOK95iX7NPlKRU8VOVCoJNS+YrfgMiKTfv9U1lQLAC9nfquYY02j+Eh6eHcYFl9ODjeTKg/ptd8cj1mDJOHZm+h7VxYihCljRADrYQ4+Vcbzc+9SUajPTUjDehg9afcAGN+bweBzCCJCSFjb1rls5iw/ElfMJ5xphCRBHU5uGZbcpfbhG6JS0CMZtFeE0jrYwKiSYaSUdZ8=
 
 after_success:
-  - sshpass -p ${SFTP_PASSWORD} scp -o stricthostkeychecking=no -r ./public/* ${SFTP_USER}@106.14.124.109/www/wwwroot/www.coymaple.com/
+  - sshpass -p ${SFTP_PASSWORD} scp -o stricthostkeychecking=no -r ./public/* ${SFTP_USER}@106.14.124.109:/www/wwwroot/www.coymaple.com/
