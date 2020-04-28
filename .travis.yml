@@ -1,5 +1,6 @@
 language: node_js
 node_js: stable
+dist: bionic
 cache:
   directories:
     - node_modules
@@ -8,7 +9,8 @@ branches:
     - blog-source
 before_install:
   - npm install -g hexo-cli
-  - pacman -S sshpass
+  - sudo apt-get update
+  - sudo apt-get -y install sshpass
 install:
   - npm install
   - npm install hexo-deployer-sftp --save
