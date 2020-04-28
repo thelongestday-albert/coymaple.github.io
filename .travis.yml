@@ -8,7 +8,7 @@ branches:
     - blog-source
 before_install:
   - npm install -g hexo-cli
-  - yum install sshpass
+  - pacman -S sshpass
 install:
   - npm install
   - npm install hexo-deployer-sftp --save
