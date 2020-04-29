@@ -20,7 +20,7 @@ env:
 
 before_install:
   - npm install -g hexo-cli
-  - hexo --version | grep hexo
+  - hexo -v
   - sudo apt-get update
   - sudo apt-get -y install sshpass
 
