@@ -1,5 +1,9 @@
 language: node_js
-node_js: stable
+# node_js: stable
+
+node_js:
+  - "0.10"
+
 dist: bionic
 
 cache:
@@ -27,8 +31,6 @@ install:
 script:
   - hexo clean
   - hexo generate
-
-
 
 after_success:
   # - sshpass -p ${SFTP_PASSWORD} scp -P 6789 -o stricthostkeychecking=no -r ./public/* ${SFTP_USER}@106.14.124.109:/www/wwwroot/www.coymaple.com/
