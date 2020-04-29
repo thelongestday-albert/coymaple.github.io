@@ -1,8 +1,8 @@
 language: node_js
-# node_js: stable
+node_js: v12.16.1
 
-node_js:
-  - "0.10"
+# node_js:
+#   - "0.10"
 
 dist: bionic
 
