@@ -29,4 +29,4 @@ script:
 
 after_success:
   - sshpass -p ${SFTP_PASSWORD} scp -P 6789 -o stricthostkeychecking=no -r ./public/* ${SFTP_USER}@106.14.124.109:/www/wwwroot/www.coymaple.com/
-  # - ls -lh ./public/
+  - ls -lh ./public/
