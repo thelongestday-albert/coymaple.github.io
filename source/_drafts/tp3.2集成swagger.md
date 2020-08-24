@@ -104,3 +104,7 @@ class Index extends Controller
 - [ThinkPHP5使用Swagger-php](https://www.cnblogs.com/shen55/p/10266103.html)
 - [如何编写基于 Swagger-PHP 的 API 文档](https://learnku.com/laravel/t/7430/how-to-write-api-documents-based-on-swagger-php)
 - [Search for a package: 的解决方法！](https://blog.csdn.net/qq_41408081/article/details/100767440)
+
+<!-- `php C:/phpstudy_pro/WWW/vendor/zircote/swagger-php/bin C:/phpstudy_pro/WWW/tp5/application/index/controller -o C:/phpstudy_pro/WWW/knife4j-front/static/` -->
+
+<!-- https://www.bbsmax.com/A/lk5aYewP51/ -->
